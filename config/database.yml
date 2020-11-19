@@ -80,6 +80,4 @@ test:
 #
 production:
   <<: *default
-  database: d3tdpkre5f4h6v
-  username: pikhgnyzrmskyt
-  password: <%= ENV['DB_PASSWORD'] %>
+  database: crypto_list_production
