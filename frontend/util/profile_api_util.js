@@ -4,6 +4,8 @@ export const fetchProfile = userId => (
     })
 );
 
+
+
 export const updateProfile = profile => (
     $.ajax({
         url: `/api/profiles/${profile.id}`,
