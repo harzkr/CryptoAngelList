@@ -60,7 +60,6 @@ export const deleteProfileProject = profileProjectId => (
     })
 );
 
-
 export const createProfileEducation = profile_education => (
     $.ajax({
         url: `/api/profile_educations`,
