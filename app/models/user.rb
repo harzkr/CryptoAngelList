@@ -29,6 +29,11 @@ class User < ApplicationRecord
         user && user.is_password?(password) ? user: nil
     end
 
+    def self.find_by_oauth(email)
+        user = User.find_by(email: email)
+        user && user.oauth.eql?('LinkedIn') ? user : nil
+    end
+
     def ensure_session_token
         self.session_token ||= SecureRandom.base64(16)
     end

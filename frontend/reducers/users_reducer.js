@@ -6,6 +6,7 @@ export default (state = {}, action) => {
 
     switch (action.type) {
         case RECEIVE_CURRENT_USER:
+            console.log(action.currentUser,"checking user")
             return Object.assign({}, state, { [action.currentUser.id]: action.currentUser })
         case RECEIVE_COMPANY:
             return Object.assign({}, state, { [action.company.user.id]: action.company.user })

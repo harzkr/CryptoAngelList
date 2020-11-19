@@ -20,6 +20,10 @@ class SessionForm extends React.Component {
         }
     }
 
+    handleOauth() {
+        window.location.replace('https://www.linkedin.com/oauth/v2/authorization?response_type=code&client_id=77lj0aq14s0pl8&redirect_uri=http://127.0.0.1:3000/&state=fooobar&scope=r_liteprofile%20r_emailaddress')
+    }
+
     render() {
         const { formType, errors, clearSessionErrors } = this.props;
         
@@ -56,8 +60,12 @@ class SessionForm extends React.Component {
                         value={this.state.password}
                         onChange={this.handleInput('password')}
                     />
-                    <button>{formType}</button>  
+                    <button>{formType}</button> 
                 </form>
+                <div style={{textAlign:'center',marginTop:15,height:50,display:'flex',justifyContent:'center',padding:5,alignItems:'center'}}>
+                    <img style={{cursor:'pointer'}} onClick={()=>this.handleOauth()} height="50" src="https://taggbox.com/blog/wp-content/uploads/2018/09/Signin-with-LinkedIn.png" />
+                </div>
+                
                 {altLink}
             </div>
         )

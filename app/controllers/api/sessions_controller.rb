@@ -1,7 +1,13 @@
 class Api::SessionsController < ApplicationController
     def create
-        @user = User.find_by_credentials(user_params[:email], user_params[:password])
-
+        @user = nil
+        
+        if user_params[:oauth] == 'LinkedIn'
+            @user = User.find_by_oauth(user_params[:email])
+        else
+            @user = User.find_by_credentials(user_params[:email], user_params[:password])
+        end
+        
         if @user
             log_in!(@user)
             render '/api/users/show.json.jbuilder'

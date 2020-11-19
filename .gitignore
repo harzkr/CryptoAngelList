@@ -31,6 +31,7 @@ npm-debug.log
 
 # Ignore master key for decrypting credentials and more.
 /config/master.key
+.env
 
 # Keys for the React frontend
 /config/keys_dev.js

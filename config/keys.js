@@ -1,9 +1,9 @@
 let exportKey;
 
 if (process.env.NODE_ENV === 'production') {
-    exportKey = COINMARKETCAP_API_KEY;
+    exportKey = 'ABCD';
   } else {
-    exportKey = require('./keys_dev');
+    exportKey = 'ABCD';
 }
 
 export default exportKey;

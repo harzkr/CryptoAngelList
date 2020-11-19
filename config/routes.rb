@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  post 'oauth_linkedin/get_access_token'
   root to: 'static_pages#root'
 
   namespace :api, defaults: { format: :json } do
