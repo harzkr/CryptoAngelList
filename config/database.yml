@@ -82,4 +82,4 @@ production:
   <<: *default
   database: crypto_list_production
   username: crypto_list
-  password: <%= ENV['CRYPTO_LIST_DATABASE_PASSWORD'] %>
+  password: <%= ENV['DB_PASSWORD'] %>
