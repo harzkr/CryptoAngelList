@@ -28,7 +28,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "webpack": "webpack --watch --mode=development",
     "build": "yarn && webpack --config ./webpack.production.js --mode production",
-    "deploy": "cp -a frontend/build/. public/",
+    "deploy": "cp -a build/. public/",
     "heroku-postbuild": "yarn build && yarn deploy"
   },
   "repository": {
