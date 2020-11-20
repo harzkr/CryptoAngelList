@@ -16,19 +16,19 @@ local:
 
 amazon_dev:
   service: S3
-  access_key_id: <%= Rails.application.credentials.aws[:access_key_id] %>
+  access_key_id: <%= ENV['AWS_ACCESS_KEY'] %>
   secret_access_key:
-    <%= Rails.application.credentials.aws[:secret_access_key] %>
-  region: <%= Rails.application.credentials.aws[:region] %>
-  bucket: <%= Rails.application.credentials.aws[:dev][:bucket] %>
+    <%= ENV['AWS_ACCESS_SECRET'] %>
+  region: <%= ENV['AWS_ACCESS_REGION'] %>
+  bucket: <%= ENV['AWS_ACCESS_BUCKET'] %>
 
 amazon_prod:
   service: S3
-  access_key_id: <%= Rails.application.credentials.aws[:access_key_id] %>
+  access_key_id: <%= ENV['AWS_ACCESS_KEY'] %>
   secret_access_key:
-    <%= Rails.application.credentials.aws[:secret_access_key] %>
-  region: <%= Rails.application.credentials.aws[:region] %>
-  bucket: <%= Rails.application.credentials.aws[:prod][:bucket] %>
+    <%= ENV['AWS_ACCESS_SECRET'] %>
+  region: <%= ENV['AWS_ACCESS_REGION'] %>
+  bucket: <%= ENV['AWS_ACCESS_BUCKET'] %>
 
 # Remember not to checkin your GCS keyfile to a repository
 # google:
