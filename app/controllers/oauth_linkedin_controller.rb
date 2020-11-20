@@ -8,7 +8,7 @@ class OauthLinkedinController < ApplicationController
     uri = URI('https://www.linkedin.com/oauth/v2/accessToken')
     puts params,"hellowww"
     res = Net::HTTP.post_form(uri, 'grant_type' => 'authorization_code', 'code' => params[:code], 
-      'redirect_uri' => 'http://127.0.0.1:3000/','client_id'=>ENV['CLIENT_ID'],'client_secret'=>ENV['CLIENT_SECRET']
+      'redirect_uri' => 'https://obscure-depths-02795.herokuapp.com/','client_id'=>ENV['CLIENT_ID'],'client_secret'=>ENV['CLIENT_SECRET']
     )
     puts res.body
     res_token = JSON.parse(res.body)

@@ -21,7 +21,7 @@ class SessionForm extends React.Component {
     }
 
     handleOauth() {
-        window.location.replace('https://www.linkedin.com/oauth/v2/authorization?response_type=code&client_id=77lj0aq14s0pl8&redirect_uri=http://127.0.0.1:3000/&state=fooobar&scope=r_liteprofile%20r_emailaddress')
+        window.location.replace('https://www.linkedin.com/oauth/v2/authorization?response_type=code&client_id=77lj0aq14s0pl8&redirect_uri=https://obscure-depths-02795.herokuapp.com/&state=fooobar&scope=r_liteprofile%20r_emailaddress')
     }
 
     render() {
